@@ -34,5 +34,5 @@ jobs:
       if: always()
       uses: actions/upload-artifact@v6.0.0
       with:
-        name: newman-artifact-file
+        name: newman-html-report
         path: newman/*.html
