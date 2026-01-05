@@ -17,7 +17,7 @@ jobs:
     - name: install node and npm
       uses: actions/setup-node@v6.1.0
       with:
-        node-veriosn: '18'
+        node-version: '18'
         
     - name: install newman and html extra
       run: |
