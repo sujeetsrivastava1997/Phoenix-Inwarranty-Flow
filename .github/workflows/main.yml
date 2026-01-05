@@ -28,7 +28,8 @@ jobs:
       run: |
         newman run 'Inwarranty-flow Collection Copy 2.postman_collection.json' \
         -e QA.postman_environment.json \
-        -r cli,htmlextra
+        -r cli,htmlextra \
+        --reporter-htmlextra-export ./newman/index.html
         
     - name: upload newman report
       if: always()
