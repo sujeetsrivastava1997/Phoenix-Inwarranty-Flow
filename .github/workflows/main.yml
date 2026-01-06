@@ -54,7 +54,7 @@ jobs:
         username: ${{ secrets.EMAIL_USERNAME }}
         password: ${{ secrets.EMAIL_PASSWORD }}
         subject: API test repot
-        to: sujeetondemand@gmail.com
+        to: sujeetondemand@gmail.com,chitra.summer@gmail.com
         from: ${{ secrets.EMAIL_USERNAME }}
         body: |
               Hello team please find the HTML report of API test
