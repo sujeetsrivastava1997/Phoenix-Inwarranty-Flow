@@ -44,3 +44,24 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: newman/
+        
+    - name: send email notifications
+      if: always()
+      uses: dawidd6/action-send-mail@v7
+      with:
+        server_port: 465
+        server_address: smtp.gmail.com
+        username: ${{ secrets.EMAIL_USERNAME }}
+        password: ${{ secrets.EMAIL_PASSWORD }}
+        subject: API test repot
+        to: sujeetondemand@gmail.com
+        from: ${{ secrets.EMAIL_USERNAME }}
+        body: |
+              Hello team please find the HTML report of API test
+              Link to live report: https://sujeetsrivastava1997.github.io/Phoenix-Inwarranty-Flow/
+              Regards,
+              Sujeet Srivastava
+        
+        
+        
+        
